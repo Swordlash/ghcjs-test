@@ -11,7 +11,7 @@ export OUT1=$EXE"/all.min.js"
 
 export OUT2="dev/index.js"
 
-google-closure-compiler -O ADVANCED --js_output_file $OUT1 $IN1 $IN2
+npx google-closure-compiler -O ADVANCED --js_output_file $OUT1 $IN1 $IN2
 cp $OUT1 $OUT2
 # terser $IN --compress toplevel=true --mangle toplevel=true --output $OUT
-http-server dev/ # -- or parcel dev/index.html or webpack
+npx http-server dev/ # -- or parcel dev/index.html or webpack

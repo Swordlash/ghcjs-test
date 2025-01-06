@@ -10,9 +10,17 @@ build-type:         Simple
 common warnings
     ghc-options: -Wall
 
+library
+    build-depends:    base
+    default-language: GHC2024
+    hs-source-dirs:   lib
+
+    js-sources: lib/Print.js
+    ghc-options: -optJSP-DDARK_SIDE
+
 executable ghcjs-test
     import:           warnings
     main-is:          Main.hs
-    build-depends:    base
+    build-depends:    base, ghcjs-test
     hs-source-dirs:   app
     default-language: GHC2024

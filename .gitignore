@@ -25,6 +25,5 @@ cabal.project.local~
 dev/index.js
 node_modules
 .parcel-cache/
-package.json
 package-lock.json
 webpack.config.js
